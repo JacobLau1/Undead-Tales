@@ -8,7 +8,7 @@ import lang.stride.*;
  */
 public class MainMenu extends World
 {
-    //to make a field for sound
+    //to make a field for game sound 
     private GreenfootSound bgSound;
     
     /**
