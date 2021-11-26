@@ -10,7 +10,6 @@ public class MainMenu extends World
 {
     //to make a field for game sound 
     private GreenfootSound bgSound;
-    
     /**
      * Constructor for objects of class MainMenu.
      * 
@@ -23,20 +22,23 @@ public class MainMenu extends World
         prepare();
         soundStart();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
-        //To place user button choices location on the screen
+        MainMenuParticles mainMenuParticles = new MainMenuParticles();
+        addObject(mainMenuParticles,624,278);
         PlayButton playButton = new PlayButton();
-        addObject(playButton,118,249);
+        addObject(playButton,119,252);
         HelpButton helpButton = new HelpButton();
         addObject(helpButton,118,306);
         CreditsButton creditsButton = new CreditsButton();
-        addObject(creditsButton,118,363);
+        addObject(creditsButton,116,364);
     }
+
      /**
      * To start the Sound
      */
