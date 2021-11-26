@@ -19,6 +19,7 @@ public class SplashScreen extends World
         /* Create a new world with 600x400 cells with a cell size of 1x1 pixels.*/
         showText("Press space bar or wait 10 seconds", getWidth() / 2, 40);
         bgSound =  new  GreenfootSound("Intro.mp3");
+        prepare();
     }
 
     /**
@@ -44,6 +45,7 @@ public class SplashScreen extends World
             soundStop();
         }
     }
+
     /**
      * To start the Sound
      */
@@ -52,6 +54,7 @@ public class SplashScreen extends World
         //Loop sound Intro.mp3
         bgSound.playLoop();
     }
+
     /**
      * To stop the sound after it moves to the main screen
      */
@@ -59,5 +62,14 @@ public class SplashScreen extends World
     {
         //Stop looped sound Intro.mp3
         bgSound.stop();
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        SplashScreenParticles splashScreenParticles = new SplashScreenParticles();
+        addObject(splashScreenParticles,459,258);
     }
 }

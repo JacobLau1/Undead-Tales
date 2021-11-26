@@ -14,14 +14,15 @@ public class CreditsButton extends Actor
      */
     public void act()
     {
+        MainMenuParticles mainMenuParticles = new MainMenuParticles();
         //To set image and play the sound effect when mouse is aimed at the image
-          if (Greenfoot.mouseMoved(this))
-        {
+        if (Greenfoot.mouseMoved(this))
+        {   
              setImage("credits.png");
              Greenfoot.playSound("short wind sound.wav");
         }
         //To get mouse location and change the image when mouse is hovering over image
-          if (Greenfoot.mouseMoved(getWorld()))
+          if (Greenfoot.mouseMoved(mainMenuParticles.getImage()) || Greenfoot.mouseMoved(getWorld()))
         {
             setImage("creditsRED.png");
         }
@@ -31,6 +32,7 @@ public class CreditsButton extends Actor
             Display display = new Display();
             getWorld().addObject(display , 280, 500);
             display.setImage(new GreenfootImage("You have selected Option 3 ", 48, Color.WHITE, Color.BLACK, Color.RED));
+            Greenfoot.playSound("hjm-glass_bell_1.wav");
         }
     }
 }
