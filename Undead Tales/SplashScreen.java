@@ -30,10 +30,11 @@ public class SplashScreen extends World
         //Display dimensions
         Display display =  new  Display();
         addObject(display, 860, 40);
+        // Start Sound
+        soundStart();
         // To display the seconds in timer and get seconds count
         int timerValue = (int)(System.currentTimeMillis() - timeSplashScreenCreation) / 1000;
         display.setImage( new  GreenfootImage("Seconds passed: " + timerValue, 26, Color.WHITE, Color.BLACK, Color.WHITE));
-        soundStart();
         // To move to the next screen method 1
         if (Greenfoot.isKeyDown("space")) {
             Greenfoot.setWorld( new  MainMenu());
@@ -63,6 +64,7 @@ public class SplashScreen extends World
         //Stop looped sound Intro.mp3
         bgSound.stop();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -71,5 +73,6 @@ public class SplashScreen extends World
     {
         SplashScreenParticles splashScreenParticles = new SplashScreenParticles();
         addObject(splashScreenParticles,459,258);
+        splashScreenParticles.setLocation(460,233);
     }
 }
