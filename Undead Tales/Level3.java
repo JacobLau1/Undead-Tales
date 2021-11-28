@@ -17,12 +17,12 @@ public class Level3 extends Actor
         // set image 
         if(Greenfoot.mouseMoved(this))
         {
-
+             setImage("lvl 3 H.png");
         }
         // get mouse coordinates and change to original image 
         if(Greenfoot.mouseMoved(getWorld()))
         {
- 
+                setImage("lvl 3.png");
         }
         // change worlds
         if(Greenfoot.mouseClicked(this))

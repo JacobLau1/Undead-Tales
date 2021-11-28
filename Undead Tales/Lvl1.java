@@ -16,7 +16,11 @@ public class Lvl1 extends World
     public Lvl1()
     {    
         // size 
-        super(5000, 560, 1); 
+        super(5000, 540, 1); 
+        
+        //spawn Caesar
+        //Caesar Caesar = new Caesar();
+        //addObject(Caesar, 5, 100);
         
         //add background 1
         Lvl1Bg lvl1Bg = new Lvl1Bg();

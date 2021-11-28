@@ -16,6 +16,6 @@ public class Lvl2 extends World
     public Lvl2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(5000, 560, 1); 
+        super(5000, 540, 1); 
     }
 }
