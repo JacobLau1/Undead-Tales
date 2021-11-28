@@ -29,9 +29,7 @@ public class PlayButton extends Actor
         //To display the next screen
          if(Greenfoot.mouseClicked(this))
         {
-            Display display = new Display();
-            getWorld().addObject(display , 280, 500);
-            display.setImage(new GreenfootImage("You have selected Option 1 ", 48, Color.WHITE, Color.BLACK, Color.RED));
+            Greenfoot.setWorld(new LevelSelection());
             Greenfoot.playSound("hjm-glass_bell_1.wav");
         }
     }
