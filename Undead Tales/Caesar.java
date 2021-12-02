@@ -14,6 +14,7 @@ public class Caesar extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        
+        getImage().scale(1200, 500);
     }
 }
